@@ -6,8 +6,8 @@ import requests
 
 def userinput():
     ''' 解析用户输入 '''
-    # course = re.search(r'(\w+-\d+)', input("在此处输入 URL：")).group(1)
-    course = ''
+    course = re.search(r'(\w+-\d+)', input("在此处输入 URL：")).group(1)
+    # course = ''
     course_page_url = 'http://www.icourse163.org/learn/' + course
     course_page = requests.get(course_page_url, headers=HEADER)
     course_id_number = re.search(r'id:(\d+),', course_page.text).group(1)
