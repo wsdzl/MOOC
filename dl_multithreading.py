@@ -108,7 +108,7 @@ def download(url, fn, threads=30, bfsz=1048576, sep=0.2):
 if __name__ == '__main__':
 	import sys
 	if len(sys.argv) == 1:
-		sys._exit(0)
+		os._exit(0)
 	dirname = '.'
 	if len(sys.argv) == 3:
 		dirname = os.path.join('.', sys.argv[2])
